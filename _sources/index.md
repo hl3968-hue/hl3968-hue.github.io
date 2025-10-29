@@ -1,2 +1,2 @@
-Haixin Liu's Portfolio
+# Haixin Liu's Portfolio
 Welcome! Work in progress.
