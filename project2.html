@@ -967,8 +967,22 @@ Male   Under 25         0.85           3.13            3.66
 <span class="p">]</span>
 <span class="n">inv_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Equity Market&quot;</span><span class="p">,</span> <span class="s2">&quot;Mutual Funds&quot;</span><span class="p">,</span> <span class="s2">&quot;Gold&quot;</span><span class="p">,</span> <span class="s2">&quot;Fixed Deposits&quot;</span><span class="p">,</span> <span class="s2">&quot;Govt Bonds&quot;</span><span class="p">]</span>
 <span class="n">preferences</span> <span class="o">=</span> <span class="p">[</span><span class="n">finance_trends</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">inv_cols</span><span class="p">]</span>
-<span class="n">returns</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">]</span>
-<span class="n">volatility</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.18</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">]</span>
+<span class="n">annual_market_return</span> <span class="o">=</span> <span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">252</span>
+<span class="n">market_volatility</span> <span class="o">=</span> <span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">252</span><span class="p">)</span>
+<span class="n">returns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">annual_market_return</span><span class="p">,</span>
+    <span class="n">annual_market_return</span> <span class="o">*</span> <span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">annual_market_return</span> <span class="o">*</span> <span class="mf">0.4</span><span class="p">,</span>
+    <span class="mf">0.04</span><span class="p">,</span>
+    <span class="mf">0.035</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">volatility</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">market_volatility</span><span class="p">,</span>
+    <span class="n">market_volatility</span> <span class="o">*</span> <span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">market_volatility</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">,</span>
+    <span class="mf">0.01</span><span class="p">,</span>
+    <span class="mf">0.02</span><span class="p">,</span>
+<span class="p">]</span>
 
 <span class="n">scatter</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
     <span class="n">preferences</span><span class="p">,</span>
@@ -1135,7 +1149,7 @@ Male   Under 25         0.85           3.13            3.66
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/7789eef9b4ef7d252c40846fcec13f9dc7eb55ed26f89f7b5ebb68dcf82878a9.png" src="_images/7789eef9b4ef7d252c40846fcec13f9dc7eb55ed26f89f7b5ebb68dcf82878a9.png" />
+<img alt="_images/b4278471e1d19c9cdad9ded53ce65b88f3905d8809be64db9d000a8e23260dc0.png" src="_images/b4278471e1d19c9cdad9ded53ce65b88f3905d8809be64db9d000a8e23260dc0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Main visualization created and saved!
 </pre></div>
 </div>
