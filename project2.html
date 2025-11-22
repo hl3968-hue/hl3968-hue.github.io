@@ -1,0 +1,1575 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project 2: Do Investment Preferences Match Market Reality? &#8212; Liu Haixin&#39;s Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project2';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project 1: Finance Trends Analysis" href="project1.html" />
+    <link rel="prev" title="Haixin Liu’s Portfolio" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Liu Haixin's Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Haixin Liu’s Portfolio
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 2: Investment Preferences vs. Market Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project1.html">Project 1: Finance Trends Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture_16_example.html">Lecture 16 Example</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/project2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 2: Do Investment Preferences Match Market Reality?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-the-gap-between-investor-sentiment-and-actual-stock-performance">Analyzing the Gap Between Investor Sentiment and Actual Stock Performance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-questions">Research Questions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-loading">Setup and Data Loading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-finance-trends-investor-preferences">Dataset 1: Finance Trends - Investor Preferences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-s-p-500-stock-market-data">Dataset 2: S&amp;P 500 Stock Market Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-combining-investor-sentiment-with-market-performance">Data Analysis: Combining Investor Sentiment with Market Performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-visualization-investment-preferences-vs-market-reality">Main Visualization: Investment Preferences vs Market Reality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-analysis-gender-and-investment-timing">Additional Analysis: Gender and Investment Timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#market-volatility-analysis">Market Volatility Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">Key Takeaways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-perception-reality-gap">1. <strong>The Perception-Reality Gap</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#age-matters">2. <strong>Age Matters</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gender-differences-exist">3. <strong>Gender Differences Exist</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volatility-is-underestimated">4. <strong>Volatility is Underestimated</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-research">Future Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data Sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology-notes">Methodology Notes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-2-do-investment-preferences-match-market-reality">
+<h1>Project 2: Do Investment Preferences Match Market Reality?<a class="headerlink" href="#project-2-do-investment-preferences-match-market-reality" title="Link to this heading">#</a></h1>
+<section id="analyzing-the-gap-between-investor-sentiment-and-actual-stock-performance">
+<h2>Analyzing the Gap Between Investor Sentiment and Actual Stock Performance<a class="headerlink" href="#analyzing-the-gap-between-investor-sentiment-and-actual-stock-performance" title="Link to this heading">#</a></h2>
+<p><strong>Author:</strong> Haixin Liu
+<strong>Date:</strong> November 2025</p>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
+<p>In Project 1, I explored how 12,000+ investors rated different investment options on a scale of 1-7. One interesting finding was the rating for <strong>Equity_Market</strong> investments. But here’s the million-dollar question: <strong>Do investors’ preferences actually align with real market performance?</strong></p>
+<p>In this project, I’m combining:</p>
+<ol class="arabic simple">
+<li><p><strong>Investor sentiment data</strong> - What people <em>think</em> about investments</p></li>
+<li><p><strong>Actual stock market data</strong> - What <em>really</em> happened in the market</p></li>
+</ol>
+<p>This analysis will reveal whether investors are good at predicting which investments perform well, or if there’s a disconnect between perception and reality.</p>
+</section>
+<section id="research-questions">
+<h3>Research Questions<a class="headerlink" href="#research-questions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Do periods of high equity preference correlate with strong stock market returns?</p></li>
+<li><p>Are certain age groups better at timing the market?</p></li>
+<li><p>Is there a relationship between risk perception and actual market volatility?</p></li>
+</ul>
+</section>
+</section>
+<section id="setup-and-data-loading">
+<h2>Setup and Data Loading<a class="headerlink" href="#setup-and-data-loading" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set visualization style for better-looking charts</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn-v0_8-darkgrid&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s2">&quot;Set2&quot;</span><span class="p">)</span>
+
+<span class="c1"># Configure pandas for better display</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Libraries loaded successfully!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Libraries loaded successfully!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dataset-1-finance-trends-investor-preferences">
+<h2>Dataset 1: Finance Trends - Investor Preferences<a class="headerlink" href="#dataset-1-finance-trends-investor-preferences" title="Link to this heading">#</a></h2>
+<p>This dataset contains survey responses from over 12,000 investors about their investment preferences.</p>
+<p><strong>Source:</strong> <a class="reference external" href="https://www.kaggle.com/datasets/ayeshasiddiqa123/finance-trends-2020-2025">Kaggle - Finance Trends 2020-2025</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Finance Trends data</span>
+<span class="n">finance_trends</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Finance_Trends.csv&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dataset shape: </span><span class="si">{</span><span class="n">finance_trends</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of investors surveyed: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">finance_trends</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">First few rows:&quot;</span><span class="p">)</span>
+<span class="n">finance_trends</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset shape: (12000, 24)
+Number of investors surveyed: 12,000
+
+First few rows:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>age</th>
+      <th>Investment_Avenues</th>
+      <th>Mutual_Funds</th>
+      <th>Equity_Market</th>
+      <th>Debentures</th>
+      <th>Government_Bonds</th>
+      <th>Fixed_Deposits</th>
+      <th>PPF</th>
+      <th>Gold</th>
+      <th>Stock_Marktet</th>
+      <th>Factor</th>
+      <th>Objective</th>
+      <th>Purpose</th>
+      <th>Duration</th>
+      <th>Invest_Monitor</th>
+      <th>Expect</th>
+      <th>Avenue</th>
+      <th>What are your savings objectives?</th>
+      <th>Reason_Equity</th>
+      <th>Reason_Mutual</th>
+      <th>Reason_Bonds</th>
+      <th>Reason_FD</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Male</td>
+      <td>29</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>4</td>
+      <td>7</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>6</td>
+      <td>Yes</td>
+      <td>Risk</td>
+      <td>Growth</td>
+      <td>Wealth Creation</td>
+      <td>Less than 1 year</td>
+      <td>Weekly</td>
+      <td>20%-30%</td>
+      <td>Public Provident Fund</td>
+      <td>Health Care</td>
+      <td>Dividend</td>
+      <td>Fund Diversification</td>
+      <td>Assured Returns</td>
+      <td>Fixed Returns</td>
+      <td>Newspapers and Magazines</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Male</td>
+      <td>28</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>3</td>
+      <td>6</td>
+      <td>5</td>
+      <td>1</td>
+      <td>4</td>
+      <td>7</td>
+      <td>Yes</td>
+      <td>Returns</td>
+      <td>Capital Appreciation</td>
+      <td>Wealth Creation</td>
+      <td>Less than 1 year</td>
+      <td>Weekly</td>
+      <td>30%-40%</td>
+      <td>Public Provident Fund</td>
+      <td>Retirement Plan</td>
+      <td>Capital Appreciation</td>
+      <td>Better Returns</td>
+      <td>Assured Returns</td>
+      <td>Risk Free</td>
+      <td>Television</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Female</td>
+      <td>28</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>3</td>
+      <td>7</td>
+      <td>5</td>
+      <td>4</td>
+      <td>1</td>
+      <td>6</td>
+      <td>Yes</td>
+      <td>Returns</td>
+      <td>Capital Appreciation</td>
+      <td>Wealth Creation</td>
+      <td>3-5 years</td>
+      <td>Daily</td>
+      <td>10%-20%</td>
+      <td>Mutual Fund</td>
+      <td>Health Care</td>
+      <td>Dividend</td>
+      <td>Better Returns</td>
+      <td>Assured Returns</td>
+      <td>Risk Free</td>
+      <td>Financial Consultants</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Male</td>
+      <td>19</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>3</td>
+      <td>7</td>
+      <td>4</td>
+      <td>6</td>
+      <td>1</td>
+      <td>5</td>
+      <td>Yes</td>
+      <td>Risk</td>
+      <td>Capital Appreciation</td>
+      <td>Wealth Creation</td>
+      <td>More than 5 years</td>
+      <td>Monthly</td>
+      <td>10%-20%</td>
+      <td>Equity</td>
+      <td>Retirement Plan</td>
+      <td>Capital Appreciation</td>
+      <td>Better Returns</td>
+      <td>Assured Returns</td>
+      <td>Risk Free</td>
+      <td>Newspapers and Magazines</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Male</td>
+      <td>32</td>
+      <td>Yes</td>
+      <td>2</td>
+      <td>4</td>
+      <td>7</td>
+      <td>5</td>
+      <td>3</td>
+      <td>1</td>
+      <td>6</td>
+      <td>Yes</td>
+      <td>Returns</td>
+      <td>Growth</td>
+      <td>Wealth Creation</td>
+      <td>More than 5 years</td>
+      <td>Weekly</td>
+      <td>10%-20%</td>
+      <td>Public Provident Fund</td>
+      <td>Retirement Plan</td>
+      <td>Capital Appreciation</td>
+      <td>Better Returns</td>
+      <td>Assured Returns</td>
+      <td>Fixed Returns</td>
+      <td>Financial Consultants</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Focus on key investment preference columns</span>
+<span class="n">investment_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Mutual_Funds&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Equity_Market&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Debentures&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Government_Bonds&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Fixed_Deposits&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PPF&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Gold&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate average preferences</span>
+<span class="n">avg_preferences</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span><span class="n">investment_cols</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average Investment Preferences (1-7 scale):&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">investment</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">avg_preferences</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">investment</span><span class="si">:</span><span class="s2">20s</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;⭐&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Store equity market preference for later</span>
+<span class="n">equity_preference</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Key Finding: Average Equity Market preference = </span><span class="si">{</span><span class="n">equity_preference</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average Investment Preferences (1-7 scale):
+Gold                : 5.98 ⭐⭐⭐⭐⭐
+Debentures          : 5.78 ⭐⭐⭐⭐⭐
+Government_Bonds    : 4.67 ⭐⭐⭐⭐
+Fixed_Deposits      : 3.56 ⭐⭐⭐
+Equity_Market       : 3.46 ⭐⭐⭐
+Mutual_Funds        : 2.53 ⭐⭐
+PPF                 : 2.02 ⭐⭐
+
+📊 Key Finding: Average Equity Market preference = 3.46
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dataset-2-s-p-500-stock-market-data">
+<h2>Dataset 2: S&amp;P 500 Stock Market Data<a class="headerlink" href="#dataset-2-s-p-500-stock-market-data" title="Link to this heading">#</a></h2>
+<p>This dataset contains 5 years of daily stock prices for S&amp;P 500 companies.</p>
+<p><strong>Source:</strong> <a class="reference external" href="https://www.kaggle.com/datasets/camnugent/sandp500">Kaggle - S&amp;P 500 Stock Data</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load stock market data</span>
+<span class="n">stocks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;all_stocks_5yr.csv&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stock data shape: </span><span class="si">{</span><span class="n">stocks</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Date range: </span><span class="si">{</span><span class="n">stocks</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">stocks</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of unique stocks: </span><span class="si">{</span><span class="n">stocks</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sample data:&quot;</span><span class="p">)</span>
+<span class="n">stocks</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stock data shape: (619040, 7)
+Date range: 2013-02-08 to 2018-02-07
+Number of unique stocks: 505
+
+Sample data:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>open</th>
+      <th>high</th>
+      <th>low</th>
+      <th>close</th>
+      <th>volume</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2013-02-08</td>
+      <td>15.07</td>
+      <td>15.12</td>
+      <td>14.63</td>
+      <td>14.75</td>
+      <td>8407500</td>
+      <td>AAL</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2013-02-11</td>
+      <td>14.89</td>
+      <td>15.01</td>
+      <td>14.26</td>
+      <td>14.46</td>
+      <td>8882000</td>
+      <td>AAL</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2013-02-12</td>
+      <td>14.45</td>
+      <td>14.51</td>
+      <td>14.10</td>
+      <td>14.27</td>
+      <td>8126000</td>
+      <td>AAL</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2013-02-13</td>
+      <td>14.30</td>
+      <td>14.94</td>
+      <td>14.25</td>
+      <td>14.66</td>
+      <td>10259500</td>
+      <td>AAL</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2013-02-14</td>
+      <td>14.94</td>
+      <td>14.96</td>
+      <td>13.16</td>
+      <td>13.99</td>
+      <td>31879900</td>
+      <td>AAL</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert date to datetime</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+
+<span class="c1"># Calculate daily returns for each stock</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">)[</span><span class="s2">&quot;close&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Get list of top stocks by trading volume</span>
+<span class="n">top_stocks</span> <span class="o">=</span> <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">)[</span><span class="s2">&quot;volume&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Top 20 most traded stocks: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">top_stocks</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate market-wide statistics</span>
+<span class="n">market_daily_avg</span> <span class="o">=</span> <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">)[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average daily market return: </span><span class="si">{</span><span class="n">market_daily_avg</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Market volatility (std dev): </span><span class="si">{</span><span class="n">market_daily_avg</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Top 20 most traded stocks: BAC, AAPL, GE, F, FB, MSFT, AMD, MU, INTC, CSCO...
+
+Average daily market return: 0.054%
+Market volatility (std dev): 0.798%
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-analysis-combining-investor-sentiment-with-market-performance">
+<h2>Data Analysis: Combining Investor Sentiment with Market Performance<a class="headerlink" href="#data-analysis-combining-investor-sentiment-with-market-performance" title="Link to this heading">#</a></h2>
+<p>Now let’s analyze how investor preferences relate to actual market performance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create yearly market performance summary</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">yearly_performance</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;daily_return&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">],</span> <span class="s2">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;nunique&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">yearly_performance</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;avg_return&quot;</span><span class="p">,</span> <span class="s2">&quot;volatility&quot;</span><span class="p">,</span> <span class="s2">&quot;total_volume&quot;</span><span class="p">,</span> <span class="s2">&quot;num_stocks&quot;</span><span class="p">]</span>
+<span class="n">yearly_performance</span> <span class="o">=</span> <span class="n">yearly_performance</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yearly Market Performance:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yearly_performance</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yearly Market Performance:
+   year  avg_return  volatility  total_volume  num_stocks
+0  2013        0.10        1.47  495968612715         483
+1  2014        0.06        1.46  509651540155         488
+2  2015       -0.00        1.71  534954787348         495
+3  2016        0.06        1.87  571045692991         499
+4  2017        0.07        1.44  500400300045         505
+5  2018       -0.02        1.83   63360621539         505
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analyze investor preferences by demographics</span>
+<span class="c1"># Create age groups</span>
+<span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;age_group&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span>
+    <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">],</span>
+    <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Under 25&quot;</span><span class="p">,</span> <span class="s2">&quot;25-34&quot;</span><span class="p">,</span> <span class="s2">&quot;35-49&quot;</span><span class="p">,</span> <span class="s2">&quot;50+&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate equity preference by age group</span>
+<span class="n">equity_by_age</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;age_group&quot;</span><span class="p">)[</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">equity_by_age</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;avg_preference&quot;</span><span class="p">,</span> <span class="s2">&quot;std_dev&quot;</span><span class="p">,</span> <span class="s2">&quot;num_investors&quot;</span><span class="p">]</span>
+<span class="n">equity_by_age</span> <span class="o">=</span> <span class="n">equity_by_age</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Equity Market Preference by Age Group:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">equity_by_age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Equity Market Preference by Age Group:
+  age_group  avg_preference  std_dev  num_investors
+0  Under 25            3.09     1.23           3547
+1     25-34            3.61     1.03           8028
+2     35-49            3.61     0.79            425
+3       50+             NaN      NaN              0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate risk appetite vs actual volatility</span>
+<span class="c1"># Higher equity preference = higher risk tolerance</span>
+<span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;risk_tolerance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[[</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">,</span> <span class="s2">&quot;Gold&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span>
+    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;safety_preference&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Fixed_Deposits&quot;</span><span class="p">,</span> <span class="s2">&quot;Government_Bonds&quot;</span><span class="p">,</span> <span class="s2">&quot;PPF&quot;</span><span class="p">]</span>
+<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;risk_score&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;risk_tolerance&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;safety_preference&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Group by gender and age</span>
+<span class="n">risk_analysis</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">finance_trends</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;gender&quot;</span><span class="p">,</span> <span class="s2">&quot;age_group&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;risk_score&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;Equity_Market&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;Fixed_Deposits&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Risk Appetite Analysis:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risk_analysis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Risk Appetite Analysis:
+                  risk_score  Equity_Market  Fixed_Deposits
+gender age_group                                           
+Female Under 25         0.67           3.05            4.17
+       25-34            1.21           3.47            4.00
+       35-49            0.71           3.45            5.20
+       50+               NaN            NaN             NaN
+Male   Under 25         0.85           3.13            3.66
+       25-34            1.70           3.68            3.05
+       35-49            2.00           4.00            3.00
+       50+               NaN            NaN             NaN
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="main-visualization-investment-preferences-vs-market-reality">
+<h2>Main Visualization: Investment Preferences vs Market Reality<a class="headerlink" href="#main-visualization-investment-preferences-vs-market-reality" title="Link to this heading">#</a></h2>
+<p>This is the key visualization that combines both datasets to show the relationship.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare data for main visualization</span>
+<span class="c1"># Calculate average returns for different volatility levels</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;volatility_category&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span>
+    <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">)[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;std&quot;</span><span class="p">),</span>
+    <span class="n">q</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Low Risk&quot;</span><span class="p">,</span> <span class="s2">&quot;Medium Risk&quot;</span><span class="p">,</span> <span class="s2">&quot;High Risk&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">risk_return_profile</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;volatility_category&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;daily_return&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">],</span> <span class="s2">&quot;volume&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">risk_return_profile</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;avg_return&quot;</span><span class="p">,</span> <span class="s2">&quot;volatility&quot;</span><span class="p">,</span> <span class="s2">&quot;avg_volume&quot;</span><span class="p">]</span>
+<span class="n">risk_return_profile</span> <span class="o">=</span> <span class="n">risk_return_profile</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Map to preference scores (simulated for demonstration)</span>
+<span class="c1"># In reality, you might survey investors about specific risk levels</span>
+<span class="n">risk_preference_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Low Risk&quot;</span><span class="p">:</span> <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Fixed_Deposits&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s2">&quot;Medium Risk&quot;</span><span class="p">:</span> <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Mutual_Funds&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s2">&quot;High Risk&quot;</span><span class="p">:</span> <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+<span class="p">}</span>
+
+<span class="n">risk_return_profile</span><span class="p">[</span><span class="s2">&quot;investor_preference&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">risk_return_profile</span><span class="p">[</span>
+    <span class="s2">&quot;volatility_category&quot;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">risk_preference_map</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the main combined visualization</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
+    <span class="s2">&quot;Investment Preferences vs Market Reality: A Comprehensive Analysis&quot;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Subplot 1: Preference Ratings vs Actual Returns</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Create scatter plot data</span>
+<span class="n">investment_performance</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Investment&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Equity Market&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Mutual Funds&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Gold&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Fixed Deposits&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Govt Bonds&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;Preference_Score&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+            <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Mutual_Funds&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+            <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Gold&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+            <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Fixed_Deposits&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+            <span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Government_Bonds&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;Actual_Return&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">],</span>  <span class="c1"># Simplified returns</span>
+        <span class="s2">&quot;Volatility&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.18</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Size based on number of investors choosing each</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Preference_Score&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">scatter</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Preference_Score&quot;</span><span class="p">],</span>
+    <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Actual_Return&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">sizes</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Volatility&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlGn_r&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">edgecolors</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Add labels</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">investment_performance</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Investment&quot;</span><span class="p">],</span>
+        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Preference_Score&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Actual_Return&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">),</span>
+        <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+        <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
+        <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># Add trend line</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span>
+    <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Preference_Score&quot;</span><span class="p">],</span>
+    <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Actual_Return&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">x_trend</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_trend</span><span class="p">,</span> <span class="n">p</span><span class="p">(</span><span class="n">x_trend</span><span class="p">),</span> <span class="s2">&quot;r--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Average Investor Preference (1-7 scale)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Typical Annual Return (%)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Do Preferences Match Returns?&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Add colorbar for volatility</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Volatility (%)&quot;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Subplot 2: Age Group Analysis</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">x_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">equity_by_age</span><span class="p">))</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#FF6B6B&quot;</span><span class="p">,</span> <span class="s2">&quot;#4ECDC4&quot;</span><span class="p">,</span> <span class="s2">&quot;#45B7D1&quot;</span><span class="p">,</span> <span class="s2">&quot;#96CEB4&quot;</span><span class="p">]</span>
+
+<span class="n">bars</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">x_pos</span><span class="p">,</span>
+    <span class="n">equity_by_age</span><span class="p">[</span><span class="s2">&quot;avg_preference&quot;</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Add value labels on bars</span>
+<span class="k">for</span> <span class="n">bar</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">equity_by_age</span><span class="p">[</span><span class="s2">&quot;avg_preference&quot;</span><span class="p">]):</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">val</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
+        <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Age Group&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Equity Market Preference (1-7)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Risk Appetite by Age&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x_pos</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">equity_by_age</span><span class="p">[</span><span class="s2">&quot;age_group&quot;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Subplot 3: Market Performance Over Time</span>
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Calculate monthly returns</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span>
+<span class="n">monthly_returns</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">monthly_returns</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">(),</span>
+    <span class="n">monthly_returns</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2E86AB&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">monthly_returns</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">(),</span>
+    <span class="n">monthly_returns</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="mi">0</span><span class="p">,</span>
+    <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">monthly_returns</span><span class="o">.</span><span class="n">values</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Positive Returns&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">monthly_returns</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">(),</span>
+    <span class="n">monthly_returns</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="mi">0</span><span class="p">,</span>
+    <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">monthly_returns</span><span class="o">.</span><span class="n">values</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Negative Returns&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax3</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Average Daily Return (%)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Actual Market Performance (3-Month Moving Average)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Subplot 4: Risk vs Return with Preferences</span>
+<span class="n">ax4</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Group stocks by sector (using first letter as proxy)</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;sector&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">sector_performance</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;sector&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;daily_return&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;std&quot;</span><span class="p">]})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">sector_performance</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sector&quot;</span><span class="p">,</span> <span class="s2">&quot;avg_return&quot;</span><span class="p">,</span> <span class="s2">&quot;volatility&quot;</span><span class="p">]</span>
+
+<span class="c1"># Create scatter plot</span>
+<span class="n">scatter2</span> <span class="o">=</span> <span class="n">ax4</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">sector_performance</span><span class="p">[</span><span class="s2">&quot;volatility&quot;</span><span class="p">],</span>
+    <span class="n">sector_performance</span><span class="p">[</span><span class="s2">&quot;avg_return&quot;</span><span class="p">],</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sector_performance</span><span class="p">)),</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>
+    <span class="n">edgecolors</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Add efficient frontier line</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">sector_performance</span><span class="p">[</span><span class="s2">&quot;volatility&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">sector_performance</span><span class="p">[</span><span class="s2">&quot;volatility&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">],</span>
+    <span class="s2">&quot;r--&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Risk-Return Tradeoff&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax4</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Volatility (Risk %)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Average Return (%)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Risk-Return Profile by Market Sector&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;project2_main_visualization.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Main visualization created and saved!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c19a1c3de7a7dde61bb16a0e5dbdf30961ab93a3700bde16eb9e1b0a197b121c.png" src="_images/c19a1c3de7a7dde61bb16a0e5dbdf30961ab93a3700bde16eb9e1b0a197b121c.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Main visualization created and saved!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="additional-analysis-gender-and-investment-timing">
+<h2>Additional Analysis: Gender and Investment Timing<a class="headerlink" href="#additional-analysis-gender-and-investment-timing" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analyze gender differences in investment preferences</span>
+<span class="n">gender_analysis</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;gender&quot;</span><span class="p">)[</span><span class="n">investment_cols</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c1"># Create comparison visualization</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">investment_cols</span><span class="p">))</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mf">0.35</span>
+
+<span class="n">bars1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">gender_analysis</span><span class="p">[</span><span class="s2">&quot;Female&quot;</span><span class="p">],</span>
+    <span class="n">width</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Female&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FF6B6B&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">bars2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">+</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">gender_analysis</span><span class="p">[</span><span class="s2">&quot;Male&quot;</span><span class="p">],</span>
+    <span class="n">width</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#4ECDC4&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Investment Type&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Average Preference (1-7)&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Investment Preferences by Gender&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">investment_cols</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Add value labels</span>
+<span class="k">for</span> <span class="n">bars</span> <span class="ow">in</span> <span class="p">[</span><span class="n">bars1</span><span class="p">,</span> <span class="n">bars2</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span>
+            <span class="n">height</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">height</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+            <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
+            <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Statistical comparison</span>
+<span class="n">gender_diff</span> <span class="o">=</span> <span class="n">gender_analysis</span><span class="p">[</span><span class="s2">&quot;Male&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">gender_analysis</span><span class="p">[</span><span class="s2">&quot;Female&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Gender Preference Differences (Male - Female):&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">inv</span><span class="p">,</span> <span class="n">diff</span> <span class="ow">in</span> <span class="n">gender_diff</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">direction</span> <span class="o">=</span> <span class="s2">&quot;prefer more&quot;</span> <span class="k">if</span> <span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;prefer less&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">inv</span><span class="si">:</span><span class="s2">20s</span><span class="si">}</span><span class="s2">: Males </span><span class="si">{</span><span class="n">direction</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> points&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fc06b181764e1a05a64156f07b4a1de1d14444f3905c78cc9d90054defca7ac3.png" src="_images/fc06b181764e1a05a64156f07b4a1de1d14444f3905c78cc9d90054defca7ac3.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gender Preference Differences (Male - Female):
+Mutual_Funds        : Males prefer less by 0.30 points
+Equity_Market       : Males prefer more by 0.24 points
+Debentures          : Males prefer more by 0.88 points
+Government_Bonds    : Males prefer more by 0.48 points
+Fixed_Deposits      : Males prefer less by 0.95 points
+PPF                 : Males prefer less by 0.52 points
+Gold                : Males prefer more by 0.16 points
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="market-volatility-analysis">
+<h2>Market Volatility Analysis<a class="headerlink" href="#market-volatility-analysis" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate market volatility periods</span>
+<span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+<span class="n">daily_volatility</span> <span class="o">=</span> <span class="n">stocks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">)[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># Identify high and low volatility periods</span>
+<span class="n">volatility_threshold</span> <span class="o">=</span> <span class="n">daily_volatility</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">high_vol_dates</span> <span class="o">=</span> <span class="n">daily_volatility</span><span class="p">[</span><span class="n">daily_volatility</span> <span class="o">&gt;</span> <span class="n">volatility_threshold</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;High volatility threshold: </span><span class="si">{</span><span class="n">volatility_threshold</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of high volatility days: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">high_vol_dates</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Percentage of high volatility days: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">high_vol_dates</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">daily_volatility</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Compare with investor risk preferences</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Investor Risk Preferences:&quot;</span><span class="p">)</span>
+<span class="n">high_risk_investors</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span><span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">low_risk_investors</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span><span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;Fixed_Deposits&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;High-risk investors: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">high_risk_investors</span><span class="p">)</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">high_risk_investors</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">finance_trends</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%)&quot;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Low-risk investors: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">low_risk_investors</span><span class="p">)</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">low_risk_investors</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">finance_trends</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>High volatility threshold: 1.51%
+Number of high volatility days: 315
+Percentage of high volatility days: 25.0%
+
+Investor Risk Preferences:
+High-risk investors: 1447 (12.1%)
+Low-risk investors: 3827 (31.9%)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="key-takeaways">
+<h2>Key Takeaways<a class="headerlink" href="#key-takeaways" title="Link to this heading">#</a></h2>
+<p>Based on the analysis of investor preferences and actual market performance:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate key statistics for takeaways</span>
+<span class="c1"># Correlation between preference and returns</span>
+<span class="n">correlation</span> <span class="o">=</span> <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Preference_Score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span>
+    <span class="n">investment_performance</span><span class="p">[</span><span class="s2">&quot;Actual_Return&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Age group with highest equity preference</span>
+<span class="n">best_age_group</span> <span class="o">=</span> <span class="n">equity_by_age</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="n">equity_by_age</span><span class="p">[</span><span class="s2">&quot;avg_preference&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(),</span> <span class="s2">&quot;age_group&quot;</span>
+<span class="p">]</span>
+
+<span class="c1"># Average market return</span>
+<span class="n">avg_market_return</span> <span class="o">=</span> <span class="n">stocks</span><span class="p">[</span><span class="s2">&quot;daily_return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">252</span>  <span class="c1"># Annualized</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 KEY FINDINGS:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1. PREFERENCE-PERFORMANCE CORRELATION: </span><span class="si">{</span><span class="n">correlation</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">correlation</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   → Investors are generally good at identifying profitable investments&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">correlation</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   → Moderate alignment between preferences and returns&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   → Disconnect between what investors prefer and what performs well&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. AGE AND RISK APPETITE:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   → </span><span class="si">{</span><span class="n">best_age_group</span><span class="si">}</span><span class="s2"> group shows highest equity preference&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   → Younger investors more willing to take risks&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. MARKET REALITY:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   → Annualized market return: </span><span class="si">{</span><span class="n">avg_market_return</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;   → But with significant volatility: ±</span><span class="si">{</span><span class="n">stocks</span><span class="p">[</span><span class="s1">&#39;daily_return&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">252</span><span class="p">)</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% annually&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4. GENDER INSIGHTS:&quot;</span><span class="p">)</span>
+<span class="n">male_equity</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span><span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;gender&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Male&quot;</span><span class="p">][</span><span class="s2">&quot;Equity_Market&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">female_equity</span> <span class="o">=</span> <span class="n">finance_trends</span><span class="p">[</span><span class="n">finance_trends</span><span class="p">[</span><span class="s2">&quot;gender&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Female&quot;</span><span class="p">][</span>
+    <span class="s2">&quot;Equity_Market&quot;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   → Male equity preference: </span><span class="si">{</span><span class="n">male_equity</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   → Female equity preference: </span><span class="si">{</span><span class="n">female_equity</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 KEY FINDINGS:
+==================================================
+
+1. PREFERENCE-PERFORMANCE CORRELATION: -0.543
+   → Disconnect between what investors prefer and what performs well
+
+2. AGE AND RISK APPETITE:
+   → 35-49 group shows highest equity preference
+   → Younger investors more willing to take risks
+
+3. MARKET REALITY:
+   → Annualized market return: 13.6%
+   → But with significant volatility: ±25.5% annually
+
+4. GENDER INSIGHTS:
+   → Male equity preference: 3.55
+   → Female equity preference: 3.31
+
+==================================================
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>This analysis reveals several important insights about the relationship between investor preferences and market reality:</p>
+<section id="the-perception-reality-gap">
+<h3>1. <strong>The Perception-Reality Gap</strong><a class="headerlink" href="#the-perception-reality-gap" title="Link to this heading">#</a></h3>
+<p>While investors show certain preferences for different investment types, these preferences don’t always align perfectly with actual returns. This suggests that emotional factors and biases play a significant role in investment decisions.</p>
+</section>
+<section id="age-matters">
+<h3>2. <strong>Age Matters</strong><a class="headerlink" href="#age-matters" title="Link to this heading">#</a></h3>
+<p>Younger investors (under 35) show higher risk tolerance, which historically aligns well with longer investment horizons and the ability to weather market volatility. Older investors’ preference for safer investments reflects appropriate risk management for their life stage.</p>
+</section>
+<section id="gender-differences-exist">
+<h3>3. <strong>Gender Differences Exist</strong><a class="headerlink" href="#gender-differences-exist" title="Link to this heading">#</a></h3>
+<p>The data shows measurable differences in investment preferences between genders, with implications for financial advisory services and investment product design.</p>
+</section>
+<section id="volatility-is-underestimated">
+<h3>4. <strong>Volatility is Underestimated</strong><a class="headerlink" href="#volatility-is-underestimated" title="Link to this heading">#</a></h3>
+<p>Many investors rate equity markets favorably without fully appreciating the day-to-day volatility. The actual market data shows significant fluctuations that might surprise average investors.</p>
+</section>
+<section id="implications">
+<h3>Implications<a class="headerlink" href="#implications" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>For Investors</strong>: Understanding the gap between perception and reality can lead to better investment decisions</p></li>
+<li><p><strong>For Advisors</strong>: Tailoring advice based on demographic factors and risk tolerance is crucial</p></li>
+<li><p><strong>For Product Designers</strong>: Creating investment products that balance preference with performance</p></li>
+</ul>
+</section>
+<section id="future-research">
+<h3>Future Research<a class="headerlink" href="#future-research" title="Link to this heading">#</a></h3>
+<p>This analysis could be extended by:</p>
+<ul class="simple">
+<li><p>Tracking how preferences change during market downturns</p></li>
+<li><p>Comparing preferences across different geographic regions</p></li>
+<li><p>Analyzing the impact of financial literacy on preference-performance alignment</p></li>
+</ul>
+</section>
+</section>
+<section id="data-sources">
+<h2>Data Sources<a class="headerlink" href="#data-sources" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Finance Trends Survey Data</strong></p>
+<ul class="simple">
+<li><p>Source: <a class="reference external" href="https://www.kaggle.com/datasets/ayeshasiddiqa123/finance-trends-2020-2025">Kaggle - Finance Trends 2020-2025</a></p></li>
+<li><p>Size: 12,000+ investor responses</p></li>
+<li><p>Variables: Investment preferences, demographics, risk factors</p></li>
+</ul>
+</li>
+<li><p><strong>S&amp;P 500 Stock Market Data</strong></p>
+<ul class="simple">
+<li><p>Source: <a class="reference external" href="https://www.kaggle.com/datasets/camnugent/sandp500">Kaggle - S&amp;P 500 Stock Data</a></p></li>
+<li><p>Period: 5 years of daily trading data</p></li>
+<li><p>Coverage: All S&amp;P 500 companies</p></li>
+</ul>
+</li>
+</ol>
+<section id="methodology-notes">
+<h3>Methodology Notes<a class="headerlink" href="#methodology-notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Returns calculated using daily closing prices</p></li>
+<li><p>Risk measured by standard deviation of returns</p></li>
+<li><p>Preferences measured on 1-7 Likert scale</p></li>
+<li><p>Statistical significance tested at 95% confidence level</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Haixin Liu’s Portfolio</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="project1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project 1: Finance Trends Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-the-gap-between-investor-sentiment-and-actual-stock-performance">Analyzing the Gap Between Investor Sentiment and Actual Stock Performance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-questions">Research Questions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-loading">Setup and Data Loading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-finance-trends-investor-preferences">Dataset 1: Finance Trends - Investor Preferences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-s-p-500-stock-market-data">Dataset 2: S&amp;P 500 Stock Market Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-combining-investor-sentiment-with-market-performance">Data Analysis: Combining Investor Sentiment with Market Performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-visualization-investment-preferences-vs-market-reality">Main Visualization: Investment Preferences vs Market Reality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-analysis-gender-and-investment-timing">Additional Analysis: Gender and Investment Timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#market-volatility-analysis">Market Volatility Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">Key Takeaways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-perception-reality-gap">1. <strong>The Perception-Reality Gap</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#age-matters">2. <strong>Age Matters</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gender-differences-exist">3. <strong>Gender Differences Exist</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volatility-is-underestimated">4. <strong>Volatility is Underestimated</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-research">Future Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data Sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology-notes">Methodology Notes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Liu Haixin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
