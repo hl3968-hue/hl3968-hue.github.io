@@ -2,7 +2,7 @@ format: jb-book
 root: index
 chapters:
   - file: Project_3
-    title: "Professional Hosts in NYC Airbnb Market"
+    title: "Project 3: Professional Hosts in NYC Airbnb Market"
   - file: Project_2
     title: "Project 2: Investment Preferences vs. Market Reality"
   - file: Project_1
