@@ -229,7 +229,7 @@
       
       
       
-      <li><a href="_sources/Project_4.md" target="_blank"
+      <li><a href="_sources/Project_4.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -239,7 +239,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -333,12 +333,12 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="project-4-mta-ridership-dashboard">
 <h1>Project 4: MTA Ridership Dashboard<a class="headerlink" href="#project-4-mta-ridership-dashboard" title="Link to this heading">#</a></h1>
-<p><strong>Haixin Lin</strong>
+<p><strong>Haixin Lin</strong><br />
 Team: Bouncing Penguin (with Hanghai Li)</p>
 <hr class="docutils" />
 <section id="what-we-built-and-why">
 <h2>What we built and why<a class="headerlink" href="#what-we-built-and-why" title="Link to this heading">#</a></h2>
-<p>This project — the MTA Ridership Dashboard — was the final deliverable for Advanced Computing for Policy. Hanghai and I built a Streamlit app on top of two BigQuery-backed NYC Open Data sources (mta_data.daily_ridership from <a class="reference external" href="http://data.ny.gov">data.ny.gov</a> and mta_data.nyc_covid_cases from <a class="reference external" href="http://data.cityofnewyork.us">data.cityofnewyork.us</a>) to answer three questions from our proposal: how have subway, bus, LIRR, and Metro-North recovered relative to comparable pre-pandemic days; how different are weekday and weekend recovery patterns, and has that gap changed over time; and do holidays, major events, and policy changes line up with visible ridership shifts. We chose batch loading for both sources because the tables are small, update on a daily cadence, and are easier to keep consistent with a full daily refresh than with event-by-event ingestion. Methodologically, the dashboard is built around three lenses on the same recovery metric — rolling averages to smooth weekly noise, weekday-versus-weekend splits, and event windows around holidays and policy changes — which let us compare absolute ridership and recovery percentages without ever pulling raw files into Streamlit.</p>
+<p>This project — the MTA Ridership Dashboard — was the final deliverable for Advanced Computing for Policy. Hanghai and I built a Streamlit app on top of two BigQuery-backed NYC Open Data sources (<code class="docutils literal notranslate"><span class="pre">mta_data.daily_ridership</span></code> from <a class="reference external" href="http://data.ny.gov">data.ny.gov</a> and <code class="docutils literal notranslate"><span class="pre">mta_data.nyc_covid_cases</span></code> from <a class="reference external" href="http://data.cityofnewyork.us">data.cityofnewyork.us</a>) to answer three questions from our proposal: how have subway, bus, LIRR, and Metro-North recovered relative to comparable pre-pandemic days; how different are weekday and weekend recovery patterns, and has that gap changed over time; and do holidays, major events, and policy changes line up with visible ridership shifts. We chose batch loading for both sources because the tables are small, update on a daily cadence, and are easier to keep consistent with a full daily refresh than with event-by-event ingestion. Methodologically, the dashboard is built around three lenses on the same recovery metric — rolling averages to smooth weekly noise, weekday-versus-weekend splits, and event windows around holidays and policy changes — which let us compare absolute ridership and recovery percentages without ever pulling raw files into Streamlit.</p>
 </section>
 <hr class="docutils" />
 <section id="how-the-app-is-organized">
@@ -350,7 +350,7 @@ Team: Bouncing Penguin (with Hanghai Li)</p>
 <hr class="docutils" />
 <section id="under-the-hood-the-data-layer">
 <h2>Under the hood — the data layer<a class="headerlink" href="#under-the-hood-the-data-layer" title="Link to this heading">#</a></h2>
-<p>Most of the engineering effort, honestly, went into the data layer rather than the charts. The pattern is one cached function per dataset wrapping a parameterized BigQuery query. The &#64;st.cache_data decorator with ttl=3600 means Streamlit only re-hits BigQuery when filters change, and the cache expires hourly to line up with the upstream refresh. We also push start_date, end_date, and lookback_days down to the SQL so the default 180-day window only scans the recent slice (ORDER BY DESC + LIMIT) instead of reading the whole table on every rerun — the single biggest performance win in the project. On top of those loaders sit two small helpers: tidy_time_series() reshapes the wide dataframe into long format and applies the rolling average in one pass (exactly what Plotly Express wants), and get_recovery_with_delta() returns a {recovery, delta} dict per mode that powers all four KPI cards.</p>
+<p>Most of the engineering effort, honestly, went into the data layer rather than the charts. The pattern is one cached function per dataset wrapping a parameterized BigQuery query. The <code class="docutils literal notranslate"><span class="pre">&#64;st.cache_data</span></code> decorator with <code class="docutils literal notranslate"><span class="pre">ttl=3600</span></code> means Streamlit only re-hits BigQuery when filters change, and the cache expires hourly to line up with the upstream refresh. We also push <code class="docutils literal notranslate"><span class="pre">start_date</span></code>, <code class="docutils literal notranslate"><span class="pre">end_date</span></code>, and <code class="docutils literal notranslate"><span class="pre">lookback_days</span></code> down to the SQL so the default 180-day window only scans the recent slice (<code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span> <span class="pre">DESC</span></code> + <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code>) instead of reading the whole table on every rerun — the single biggest performance win in the project. On top of those loaders sit two small helpers: <code class="docutils literal notranslate"><span class="pre">tidy_time_series()</span></code> reshapes the wide dataframe into long format and applies the rolling average in one pass (exactly what Plotly Express wants), and <code class="docutils literal notranslate"><span class="pre">get_recovery_with_delta()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">{recovery,</span> <span class="pre">delta}</span></code> dict per mode that powers all four KPI cards.</p>
 <p><img alt="Cached BigQuery loader: &#64;st.cache_data + ttl=3600 hits BigQuery only when filters change." src="_images/project4_figure2.png" /></p>
 <p><em>Figure 2 · Cached BigQuery loader: <code class="docutils literal notranslate"><span class="pre">&#64;st.cache_data</span></code> + <code class="docutils literal notranslate"><span class="pre">ttl=3600</span></code> hits BigQuery only when filters change.</em></p>
 <p><img alt="Two reshape helpers — tidy_time_series feeds line charts; get_recovery_with_delta powers KPI cards." src="_images/project4_figure3.png" /></p>
@@ -359,7 +359,7 @@ Team: Bouncing Penguin (with Hanghai Li)</p>
 <hr class="docutils" />
 <section id="what-i-took-away">
 <h2>What I took away<a class="headerlink" href="#what-i-took-away" title="Link to this heading">#</a></h2>
-<p>A few takeaways beyond just shipping the app. Schema drift is real and bites silently — we use Pandera at the ingest layer, configured so missing optional columns produce warnings rather than failures, which would have saved us if NY Open Data renamed a field. The BigQuery + cache_data + lookback_days pattern is something I’d reuse on basically any Streamlit-on-warehouse project; pushing filters down to SQL instead of pulling everything into pandas is the difference between a snappy app and one that times out. And working in a two-person repo with branches, PRs, and pytest in CI forced a workflow discipline that felt heavy at the start of the term and obvious by the end. The repo is on GitHub and the app is deployed on Streamlit Community Cloud — both linked from the project README.</p>
+<p>A few takeaways beyond just shipping the app. Schema drift is real and bites silently — we use Pandera at the ingest layer, configured so missing optional columns produce warnings rather than failures, which would have saved us if NY Open Data renamed a field. The BigQuery + <code class="docutils literal notranslate"><span class="pre">cache_data</span></code> + <code class="docutils literal notranslate"><span class="pre">lookback_days</span></code> pattern is something I’d reuse on basically any Streamlit-on-warehouse project; pushing filters down to SQL instead of pulling everything into pandas is the difference between a snappy app and one that times out. And working in a two-person repo with branches, PRs, and pytest in CI forced a workflow discipline that felt heavy at the start of the term and obvious by the end. The repo is on GitHub and the app is deployed on Streamlit Community Cloud — both linked from the project README.</p>
 </section>
 <hr class="docutils" />
 <section id="project-link">
