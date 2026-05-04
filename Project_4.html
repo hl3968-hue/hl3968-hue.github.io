@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Haixin Liu’s Portfolio &#8212; Liu Haixin&#39;s Portfolio</title>
+    <title>Project 4: MTA Ridership Dashboard &#8212; Liu Haixin&#39;s Portfolio</title>
   
   
   
@@ -60,13 +60,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Project_4';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Project 4: MTA Ridership Dashboard" href="Project_4.html" />
+    <link rel="next" title="Project 3: Professional Hosts in NYC Airbnb Market" href="Project_3.html" />
+    <link rel="prev" title="Haixin Liu’s Portfolio" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -118,8 +117,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -139,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -160,14 +157,14 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
                     Haixin Liu’s Portfolio
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Project_4.html">Project 4: MTA Ridership Dashboard</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 4: MTA Ridership Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Project_3.html">Project 3: Professional Hosts in NYC Airbnb Market</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Project_2.html">Project 2: Investment Preferences vs. Market Reality</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Project_1.html">Project 1: Finance Trends Analysis</a></li>
@@ -232,7 +229,7 @@
       
       
       
-      <li><a href="_sources/index.md" target="_blank"
+      <li><a href="_sources/Project_4.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +292,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -306,11 +305,23 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Haixin Liu’s Portfolio</h1>
+    <h1>Project 4: MTA Ridership Dashboard</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-built-and-why">What we built and why</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-app-is-organized">How the app is organized</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#under-the-hood-the-data-layer">Under the hood — the data layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-took-away">What I took away</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-link">Project Link</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -320,11 +331,61 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="haixin-liu-s-portfolio">
-<h1>Haixin Liu’s Portfolio<a class="headerlink" href="#haixin-liu-s-portfolio" title="Link to this heading">#</a></h1>
-<p>Welcome! Work in progress.</p>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="project-4-mta-ridership-dashboard">
+<h1>Project 4: MTA Ridership Dashboard<a class="headerlink" href="#project-4-mta-ridership-dashboard" title="Link to this heading">#</a></h1>
+<p><strong>Haixin Lin</strong>
+Team: Bouncing Penguin (with Hanghai Li)</p>
+<hr class="docutils" />
+<section id="what-we-built-and-why">
+<h2>What we built and why<a class="headerlink" href="#what-we-built-and-why" title="Link to this heading">#</a></h2>
+<p>This project — the MTA Ridership Dashboard — was the final deliverable for Advanced Computing for Policy. Hanghai and I built a Streamlit app on top of two BigQuery-backed NYC Open Data sources (<code class="docutils literal notranslate"><span class="pre">mta_data.daily_ridership</span></code> from <a class="reference external" href="http://data.ny.gov">data.ny.gov</a> and <code class="docutils literal notranslate"><span class="pre">mta_data.nyc_covid_cases</span></code> from <a class="reference external" href="http://data.cityofnewyork.us">data.cityofnewyork.us</a>) to answer three questions from our proposal:</p>
+<ul class="simple">
+<li><p>How have subway, bus, LIRR, and Metro-North recovered relative to comparable pre-pandemic days?</p></li>
+<li><p>How different are weekday and weekend recovery patterns, and has that gap changed over time?</p></li>
+<li><p>Do holidays, major events, and policy changes line up with visible ridership shifts?</p></li>
+</ul>
+<p>We chose batch loading for both sources because the tables are small, update on a daily cadence, and are easier to keep consistent with a full daily refresh than with event-by-event ingestion. Methodologically, the dashboard is built around three lenses on the same recovery metric — rolling averages to smooth weekly noise, weekday-versus-weekend splits, and event windows around holidays and policy changes — which let us compare absolute ridership and recovery percentages without ever pulling raw files into Streamlit.</p>
+</section>
+<hr class="docutils" />
+<section id="how-the-app-is-organized">
+<h2>How the app is organized<a class="headerlink" href="#how-the-app-is-organized" title="Link to this heading">#</a></h2>
+<p>From the proposal’s three research questions, the app grew into five tabs that share the same sidebar filters (time window, transit-mode multi-select, rolling-average slider).</p>
+<ul class="simple">
+<li><p><strong>Overview</strong> answers RQ1 directly — an auto-generated Key Takeaways box, four KPI cards comparing the latest 30 days against the prior 30, and four charts covering recovery, raw ridership, weekday-vs-weekend, and a mode ranking.</p></li>
+<li><p><strong>Comparison</strong> and <strong>Calendar</strong> target RQ2 with grouped bars, a year-over-year diverging view, and a day-of-week heatmap that makes the weekend lift jump out as a green band.</p></li>
+<li><p><strong>Events</strong> addresses RQ3 by overlaying Thanksgiving, the NYC Marathon, and the Congestion Pricing launch on the subway recovery line, with an impact table comparing each event day to the prior-week baseline.</p></li>
+<li><p><strong>COVID Context</strong> extends RQ3 with a dual-axis line of subway recovery against daily case counts.</p></li>
+</ul>
+<p>We deliberately scoped down from a broader initial ambition (multi-borough breakdowns, weather joins, predictive modeling) once we realized depth on these three questions would matter more than surface area.</p>
+<p><img alt="Deployed Streamlit app — sidebar filters, KPI strip, and Overview tab." src="_images/project4_figure1.png" /></p>
+<p><em>Figure 1 · Deployed Streamlit app — sidebar filters, KPI strip, and Overview tab.</em></p>
+</section>
+<hr class="docutils" />
+<section id="under-the-hood-the-data-layer">
+<h2>Under the hood — the data layer<a class="headerlink" href="#under-the-hood-the-data-layer" title="Link to this heading">#</a></h2>
+<p>Most of the engineering effort, honestly, went into the data layer rather than the charts. The pattern is one cached function per dataset wrapping a parameterized BigQuery query. The <code class="docutils literal notranslate"><span class="pre">&#64;st.cache_data</span></code> decorator with <code class="docutils literal notranslate"><span class="pre">ttl=3600</span></code> means Streamlit only re-hits BigQuery when filters change, and the cache expires hourly to line up with the upstream refresh. We also push <code class="docutils literal notranslate"><span class="pre">start_date</span></code>, <code class="docutils literal notranslate"><span class="pre">end_date</span></code>, and <code class="docutils literal notranslate"><span class="pre">lookback_days</span></code> down to the SQL so the default 180-day window only scans the recent slice (<code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span> <span class="pre">DESC</span></code> + <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code>) instead of reading the whole table on every rerun — the single biggest performance win in the project.</p>
+<p>On top of those loaders sit two small helpers: <code class="docutils literal notranslate"><span class="pre">tidy_time_series()</span></code> reshapes the wide dataframe into long format and applies the rolling average in one pass (exactly what Plotly Express wants), and <code class="docutils literal notranslate"><span class="pre">get_recovery_with_delta()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">{recovery,</span> <span class="pre">delta}</span></code> dict per mode that powers all four KPI cards.</p>
+<p><img alt="Cached BigQuery loader: &#64;st.cache_data + ttl=3600 hits BigQuery only when filters change." src="_images/project4_figure2.png" /></p>
+<p><em>Figure 2 · Cached BigQuery loader: <code class="docutils literal notranslate"><span class="pre">&#64;st.cache_data</span></code> + <code class="docutils literal notranslate"><span class="pre">ttl=3600</span></code> hits BigQuery only when filters change.</em></p>
+<p><img alt="Two reshape helpers — tidy_time_series feeds line charts; get_recovery_with_delta powers KPI cards." src="_images/project4_figure3.png" /></p>
+<p><em>Figure 3 · Two reshape helpers — <code class="docutils literal notranslate"><span class="pre">tidy_time_series</span></code> feeds line charts; <code class="docutils literal notranslate"><span class="pre">get_recovery_with_delta</span></code> powers KPI cards.</em></p>
+</section>
+<hr class="docutils" />
+<section id="what-i-took-away">
+<h2>What I took away<a class="headerlink" href="#what-i-took-away" title="Link to this heading">#</a></h2>
+<p>A few takeaways beyond just shipping the app:</p>
+<ul class="simple">
+<li><p><strong>Schema drift is real and bites silently</strong> — we use Pandera at the ingest layer, configured so missing optional columns produce warnings rather than failures, which would have saved us if NY Open Data renamed a field.</p></li>
+<li><p><strong>The BigQuery + <code class="docutils literal notranslate"><span class="pre">cache_data</span></code> + <code class="docutils literal notranslate"><span class="pre">lookback_days</span></code> pattern</strong> is something I’d reuse on basically any Streamlit-on-warehouse project; pushing filters down to SQL instead of pulling everything into pandas is the difference between a snappy app and one that times out.</p></li>
+<li><p><strong>Working in a two-person repo</strong> with branches, PRs, and pytest in CI forced a workflow discipline that felt heavy at the start of the term and obvious by the end.</p></li>
+</ul>
+<p>The repo is on GitHub and the app is deployed on Streamlit Community Cloud — both linked from the project README.</p>
+</section>
+<hr class="docutils" />
+<section id="project-link">
+<h2>Project Link<a class="headerlink" href="#project-link" title="Link to this heading">#</a></h2>
+<p>🔗 <strong>Live Demo:</strong> <a class="reference external" href="https://bouncing-penguin-forever.streamlit.app/">https://bouncing-penguin-forever.streamlit.app/</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -357,12 +418,21 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Haixin Liu’s Portfolio</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Project_4.html"
+       href="Project_3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Project 4: MTA Ridership Dashboard</p>
+        <p class="prev-next-title">Project 3: Professional Hosts in NYC Airbnb Market</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -372,6 +442,27 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-built-and-why">What we built and why</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-app-is-organized">How the app is organized</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#under-the-hood-the-data-layer">Under the hood — the data layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-took-away">What I took away</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-link">Project Link</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
