@@ -1,6 +1,8 @@
 format: jb-book
 root: index
 chapters:
+  - file: Project_4
+    title: "Project 4: MTA Ridership Dashboard"
   - file: Project_3
     title: "Project 3: Professional Hosts in NYC Airbnb Market"
   - file: Project_2
